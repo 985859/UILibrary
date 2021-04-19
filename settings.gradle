@@ -1,0 +1,2 @@
+include ':UILibrary'
+rootProject.name = "UIProject"
