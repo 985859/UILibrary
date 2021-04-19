@@ -1,3 +1,2 @@
 include ':UILibrary'
-include ':app'
 rootProject.name = "UILibrary"
