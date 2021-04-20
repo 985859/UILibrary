@@ -20,7 +20,6 @@ import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.mylibrary.api.R;
 import com.mylibrary.api.interfaces.GradientDrawableInterface;
-
 import com.mylibrary.api.utils.GradientDrawableHelper;
 import com.mylibrary.api.utils.ImageUtils;
 import com.mylibrary.api.utils.StringUtil;
