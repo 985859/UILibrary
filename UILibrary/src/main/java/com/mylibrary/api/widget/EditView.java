@@ -431,22 +431,22 @@ public class EditView extends ViewGroup {
         }
     }
 
-    @BindingAdapter("app:edit_Title")
+    @BindingAdapter("edit_Title")
     public static void setMenuTitle(EditView view, String title) {
         view.setTitle(title);
     }
 
-    @BindingAdapter("app:edit_Hint")
+    @BindingAdapter("edit_Hint")
     public static void setMenuHint(EditView view, String hint) {
         view.setHint(hint);
     }
 
-    @BindingAdapter("app:edit_Edit")
+    @BindingAdapter("edit_Edit")
     public static void setEdit(EditView view, boolean edit) {
         view.setEdit(edit);
     }
 
-    @BindingAdapter("app:edit_Text")
+    @BindingAdapter("edit_Text")
     public static void setText(EditView editView, String text) {
         if (editView != null) {
             String edTextString = editView.getText() == null ? "" : editView.getText();
@@ -458,7 +458,7 @@ public class EditView extends ViewGroup {
         }
     }
 
-    @InverseBindingAdapter(attribute = "app:edit_Text", event = "textAttrChanged")
+    @InverseBindingAdapter(attribute = "edit_Text", event = "textAttrChanged")
     public static String getValue(EditView view) {
         return view.getText();
     }
