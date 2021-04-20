@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mylibrary.api.widget.VariedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itm_address_text"
+    android:layout_width="match_parent"
+    android:layout_height="34dp"
+    android:drawableRight="@drawable/tick_red"
+    android:drawablePadding="8dp"
+    android:gravity="center_vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:textColor="@color/textColor"
+    android:textSize="@dimen/title_Size2"
+    app:attr_drawableRightHeight="18dp"
+    app:attr_drawableRightWidth="18dp" />

@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">UIProject</string>
+    <string name="app_name">myLibrary</string>
+    <string name="reget_sms_code" translatable="false">重新发送</string>
+    <string name="reget_sms_code_countdown" translatable="false">重新发送(%s)</string>
+    <string name="scan_qrcode_tips">对准二维码/条形到方框内即可自动扫描</string>
+
+
 </resources>

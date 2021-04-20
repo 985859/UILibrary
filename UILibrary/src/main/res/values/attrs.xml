@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+
+
+    <!-- 边线宽度-->
+    <attr name="attr_strokeWidth" format="dimension"></attr>
+    <!-- 边线颜色-->
+    <attr name="attr_strokeColor" format="color"></attr>
+    <!-- 间隔宽度-->
+    <attr name="attr_dashGap" format="dimension"></attr>
+    <!-- 虚线宽度-->
+    <attr name="attr_dasWidth" format="dimension"></attr>
+    <!-- 倒角 度数-->
+    <attr name="attr_cornersRaius" format="dimension"></attr>
+    <attr name="attr_topLeftRadius" format="dimension"></attr>
+    <attr name="attr_topRightRadius" format="dimension"></attr>
+    <attr name="attr_bottomLeftRadius" format="dimension"></attr>
+    <attr name="attr_bottomRightRadius" format="dimension"></attr>
+    <attr name="attr_GradientRadius" format="dimension"></attr>
+
+    <!-- 背景色-->
+    <attr name="attr_background" format="color" />
+    <!-- 不可点击颜色-->
+    <attr name="attr_disableBackground" format="color"></attr>
+    <attr name="attr_startColor" format="color"></attr>
+    <attr name="attr_centerColor" format="color"></attr>
+    <attr name="attr_endColor" format="color"></attr>
+
+
+    <!-- 渐变角度-->
+    <attr name="attr_gradientOrientation" format="enum">
+        <enum name="TOP_BOTTOM" value="0" />
+        <enum name="TR_BL" value="1" />
+        <enum name="RIGHT_LEFT" value="2" />
+        <enum name="BR_TL" value="3" />
+        <enum name="BOTTOM_TOP" value="4" />
+        <enum name="BL_TR" value="5" />
+        <enum name="LEFT_RIGHT" value="6" />
+        <enum name="TL_BR" value="7" />
+    </attr>
+    <!-- 渐变类别-->
+    <attr name="attr_gradientType" format="enum">
+        <enum name="LINEAR" value="0" />
+        <enum name="RADIAL" value="1" />
+        <enum name="SWEEP" value="2" />
+    </attr>
+    <attr name="attr_ShapeType" format="enum">
+        <enum name="RECTANGLE" value="0" />
+        <enum name="OVAL" value="1" />
+        <enum name="LINE" value="2" />
+        <enum name="RING" value="2" />
+    </attr>
+
+
+
+
+    <declare-styleable name="PicassoImageView">
+        <attr name="attr_cornersRaius" />
+        <attr name="attr_topLeftRadius" />
+        <attr name="attr_topRightRadius" />
+        <attr name="attr_bottomLeftRadius" />
+        <attr name="attr_bottomRightRadius" />
+        <attr name="attr_strokeWidth" />
+        <attr name="attr_strokeColor" />
+        <attr name="attr_mutate_background" format="boolean" />
+        <attr name="attr_oval" format="boolean" />
+        <attr name="android:scaleType" />
+        <attr name="attr_tile_mode">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="attr_tile_mode_x">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="attr_tile_mode_y">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="VariedTextView">
+        <attr name="attr_strokeWidth" />
+        <attr name="attr_strokeColor" />
+        <attr name="attr_dashGap" />
+        <attr name="attr_dasWidth" />
+        <attr name="attr_cornersRaius" />
+        <attr name="attr_topLeftRadius" />
+        <attr name="attr_topRightRadius" />
+        <attr name="attr_bottomLeftRadius" />
+        <attr name="attr_bottomRightRadius" />
+        <attr name="attr_background" />
+        <attr name="attr_disableBackground" />
+        <attr name="attr_startColor" />
+        <attr name="attr_centerColor" />
+        <attr name="attr_endColor" />
+        <attr name="attr_gradientOrientation" />
+        <attr name="attr_ShapeType" />
+        <attr name="attr_gradientType" />
+        <attr name="attr_GradientRadius" />
+        <attr name="android:textColor" />
+        <attr name="android:drawableLeft" />
+        <attr name="android:drawableBottom" />
+        <attr name="android:drawableTop" />
+        <attr name="android:drawableRight" />
+
+        <attr name="attr_drawableLeftWidth" format="dimension" />
+        <attr name="attr_drawableLeftHeight" format="dimension" />
+        <attr name="attr_drawableRightWidth" format="dimension" />
+        <attr name="attr_drawableRightHeight" format="dimension" />
+        <attr name="attr_drawableTopWidth" format="dimension" />
+        <attr name="attr_drawableTopHeight" format="dimension" />
+        <attr name="attr_drawableBottomWidth" format="dimension" />
+        <attr name="attr_drawableBottomHeight" format="dimension" />
+        <attr name="android:enabled" />
+        <attr name="attr_textDisableColor" format="color" />
+        <!-- leftDrawable 是否与第一行文字对齐-->
+        <attr name="attr_isDrawableLeftAlignFirst" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="VariedEditText">
+        <attr name="attr_strokeWidth" />
+        <attr name="attr_strokeColor" />
+        <attr name="attr_dashGap" />
+        <attr name="attr_dasWidth" />
+        <attr name="attr_cornersRaius" />
+        <attr name="attr_topLeftRadius" />
+        <attr name="attr_topRightRadius" />
+        <attr name="attr_bottomLeftRadius" />
+        <attr name="attr_bottomRightRadius" />
+        <attr name="attr_background" />
+        <attr name="attr_startColor" />
+        <attr name="attr_centerColor" />
+        <attr name="attr_endColor" />
+        <attr name="attr_gradientOrientation" />
+        <attr name="attr_ShapeType" />
+        <attr name="attr_gradientType" />
+        <attr name="attr_GradientRadius" />
+        <attr name="android:textColor" />
+        <attr name="android:drawableLeft" />
+        <attr name="android:drawableBottom" />
+        <attr name="android:drawableTop" />
+        <attr name="android:drawableRight" />
+        <attr name="attr_drawableLeftWidth" />
+        <attr name="attr_drawableLeftHeight" />
+        <attr name="attr_drawableRightWidth" />
+        <attr name="attr_drawableRightHeight" />
+        <attr name="attr_drawableTopWidth" />
+        <attr name="attr_drawableTopHeight" />
+        <attr name="attr_drawableBottomWidth" />
+        <attr name="attr_drawableBottomHeight" />
+        <attr name="attr_textDisableColor" />
+        <!-- leftDrawable 是否与第一行文字对齐-->
+        <attr name="attr_isDrawableLeftAlignFirst" />
+    </declare-styleable>
+
+
+    <declare-styleable name="VariedLinearLayout">
+        <attr name="attr_strokeWidth" />
+        <attr name="attr_strokeColor" />
+        <attr name="attr_dashGap" />
+        <attr name="attr_dasWidth" />
+        <attr name="attr_cornersRaius" />
+        <attr name="attr_topLeftRadius" />
+        <attr name="attr_topRightRadius" />
+        <attr name="attr_bottomLeftRadius" />
+        <attr name="attr_bottomRightRadius" />
+        <attr name="attr_background" />
+        <attr name="attr_startColor" />
+        <attr name="attr_centerColor" />
+        <attr name="attr_endColor" />
+        <attr name="android:maxHeight" />
+        <attr name="android:maxWidth" />
+        <attr name="attr_gradientOrientation" />
+        <attr name="attr_ShapeType" />
+        <attr name="attr_gradientType" />
+        <attr name="attr_GradientRadius" />/>
+    </declare-styleable>
+
+
+    <declare-styleable name="VariedConstraintLayout">
+        <attr name="attr_strokeWidth" />
+        <attr name="attr_strokeColor" />
+        <attr name="attr_dashGap" />
+        <attr name="attr_dasWidth" />
+        <attr name="attr_cornersRaius" />
+        <attr name="attr_topLeftRadius" />
+        <attr name="attr_topRightRadius" />
+        <attr name="attr_bottomLeftRadius" />
+        <attr name="attr_bottomRightRadius" />
+        <attr name="attr_background" />
+        <attr name="attr_startColor" />
+        <attr name="attr_centerColor" />
+        <attr name="attr_endColor" />
+        <attr name="attr_gradientOrientation" />
+        <attr name="attr_ShapeType" />
+        <attr name="attr_gradientType" />
+        <attr name="attr_GradientRadius" />/>
+    </declare-styleable>
+    <!--复选控件-->
+    <declare-styleable name="CheckBoxView">
+        <attr name="android:button" />
+        <attr name="android:drawablePadding" />
+        <attr name="attr_drawableWidth" format="dimension" />
+        <attr name="attr_drawableHeight" format="dimension" />
+    </declare-styleable>
+
+    <!-- 顶部控件-->
+    <declare-styleable name="TopView">
+        <attr name="attr_Title" format="string" />
+        <attr name="attr_TitleColor" format="color" />
+        <attr name="attr_TitleSize" format="dimension" />
+        <attr name="android:background" />
+        <attr name="attr_LeftText" format="string" />
+        <attr name="attr_LeftTextColor" format="color" />
+        <attr name="attr_LeftTextSize" format="dimension" />
+        <attr name="attr_LeftIcon" format="reference" />
+        <attr name="attr_LeftIconShow" format="boolean" />
+        <attr name="attr_LeftIconWidth" format="dimension" />
+        <attr name="attr_LeftIconHight" format="dimension" />
+        <attr name="attr_LeftIconPadding" format="dimension" />
+        <attr name="attr_RightText" format="string" />
+        <attr name="attr_RightTextColor" format="color" />
+        <attr name="attr_RightTextSize" format="dimension" />
+        <attr name="attr_RightIcon" format="reference" />
+        <attr name="attr_RightIconWidth" format="dimension" />
+        <attr name="attr_RightIconHight" format="dimension" />
+        <attr name="attr_RightIconPadding" format="dimension" />
+
+    </declare-styleable>
+    <!-- 数量控件-->
+    <declare-styleable name="NumberView">
+
+        <attr name="attr_strokeWidth" />
+        <attr name="attr_strokeColor" />
+        <attr name="attr_Radius" format="dimension" />
+        <attr name="attr_background" />
+        <!-- 是否在控件之间加分割线  默认 添加-->
+        <attr name="attr_showDivider" format="boolean" />
+        <attr name="attr_MaxNumber" format="integer" />
+        <attr name="attr_MinNumber" format="integer" />
+        <!-- 加减号控件的宽高-->
+        <attr name="attr_TextWidth" format="dimension"></attr>
+        <attr name="attr_TextHeight" format="dimension"></attr>
+        <!--加减 号的的 角度 半径  -->
+        <attr name="attr_ViewRadius" format="dimension" />
+
+        <!-- + 设置-->
+        <attr name="attr_PlusTextColor" format="color" />
+        <attr name="attr_PlusTextColor2" format="color" />
+        <attr name="attr_PlusTextSize" format="dimension" />
+        <!-- + 可点击 背景色-->
+        <attr name="attr_PlusBackgroundColor" format="color" />
+        <!-- + 不可点击 背景色-->
+        <attr name="attr_PlusBackgroundColor2" format="color" />
+
+        <!-- 一 设置-->
+        <attr name="attr_MinusTextColor" format="color" />
+        <attr name="attr_MinusTextColor2" format="color" />
+        <attr name="attr_MinusTextSize" format="dimension" />
+        <!-- 一 可点击 背景色-->
+        <attr name="attr_MinusBackgroundColor" format="color" />
+        <!-- 一 不可点击 背景色-->
+        <attr name="attr_MinusBackgroundColor2" format="color" />
+        <!-- 数字控件 设置-->
+        <attr name="attr_Number" format="integer" />
+        <attr name="attr_NumberWidth" format="dimension"></attr>
+        <attr name="attr_NumberHeight" format="dimension"></attr>
+        <attr name="attr_NumberRadius" format="dimension" />
+        <attr name="attr_NumberBackgroundColor" format="color" />
+        <attr name="attr_NumberTextColor" format="color" />
+        <attr name="attr_NumberTextSize" format="dimension" />
+
+    </declare-styleable>
+
+    <!--评分 控件-->
+    <declare-styleable name="RatingBar">
+        <!--尺寸值-->
+        <attr name="starImageSize" format="dimension" />
+        <!--星星间距-->
+        <attr name="starPadding" format="dimension" />
+        <!--星星总数-->
+        <attr name="starCount" format="integer" />
+        <!--空白的星星资源文件值-->
+        <attr name="starEmpty" format="reference" />
+        <!--满星资源文件值-->
+        <attr name="starFill" format="reference" />
+        <!--半星资源文件值-->
+        <attr name="starHalf" format="reference" />
+        <!--是否可点击boolean值-->
+        <attr name="clickable" format="boolean" />
+        <!--当前进度float值-->
+        <attr name="starStep" format="float" />
+        <!--每次进度方式的值，整星还是半星-->
+        <attr name="stepSize">
+            <enum name="Half" value="0" />
+            <enum name="Full" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="MySearchView">
+        <attr name="closeIcon" format="reference" />
+        <attr name="closeIconWidth" format="dimension" />
+        <attr name="closeIconHeight" format="dimension" />
+        <attr name="searchIcon" format="reference" />
+
+        <attr name="searchIconWidth" format="dimension" />
+        <attr name="searchIconHeight" format="dimension" />
+        <attr name="queryHintColor" format="color" />
+        <attr name="queryBackground" format="reference" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="iconifiedByDefault" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CardView">
+        <attr name="cardBackgroundColor" format="color" />
+        <attr name="cardCornerRadius" format="dimension" />
+        <attr name="cardElevation" format="dimension" />
+        <attr name="cardMaxElevation" format="dimension" />
+        <attr name="cardUseCompatPadding" format="boolean" />
+        <attr name="cardPreventCornerOverlap" format="boolean" />
+        <attr name="contentPadding" format="dimension" />
+        <attr name="contentPaddingLeft" format="dimension" />
+        <attr name="contentPaddingRight" format="dimension" />
+        <attr name="contentPaddingTop" format="dimension" />
+        <attr name="contentPaddingBottom" format="dimension" />
+        <attr name="cardShadowColorStart" format="color" />
+        <attr name="cardShadowColorEnd" format="color" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+    </declare-styleable>
+
+    <!--
+         app:kswTextOff="Off"  设置关闭时候文字显示
+         app:kswTextOn="On"    设置打开时候文字显示
+         app:kswFadeBack="false"  默认情况下是true，当设置为true是背景颜色会随着滑动逐渐变浅
+         app:kswThumbRadius="2dp" 设置正方形四角的弧的半径
+         app:kswBackRadius="2dp"  设置背景图形的四角弧的半径
+         app:kswBackMeasureRatio="2.2" 背景图形和滑块的比例
+         app:kswTintColor="#FF0000"  滑块的背景
+         app:kswBackDrawable="@drawable/" 设置背景的图形，这里也可以使用选择器来动态改变
+         app:kswThumbDrawable="@drawable/" 设置滑块的图形，这里也可以使用选择来动态改变
+         app:kswAnimationDuration="300"  设置滑动的时长
+         android:enabled="false"   设置SwitchButton不可用
+         android:checked="true"    设置SwitchButton当前打开状态
+         https://codechina.csdn.net/mirrors/kyleduo/SwitchButton?utm_source=csdn_github_accelerator
+     -->
+    <declare-styleable name="SwitchButton">
+        <attr name="kswThumbDrawable" format="reference" />
+        <attr name="kswThumbColor" format="color|reference" />
+        <attr name="kswThumbMargin" format="dimension|reference" />
+        <attr name="kswThumbMarginTop" format="dimension|reference" />
+        <attr name="kswThumbMarginBottom" format="dimension|reference" />
+        <attr name="kswThumbMarginLeft" format="dimension|reference" />
+        <attr name="kswThumbMarginRight" format="dimension|reference" />
+        <attr name="kswThumbWidth" format="dimension|reference" />
+        <attr name="kswThumbHeight" format="dimension|reference" />
+        <attr name="kswThumbRadius" format="dimension|reference" />
+        <attr name="kswBackRadius" format="dimension|reference" />
+        <attr name="kswBackDrawable" format="reference" />
+        <attr name="kswBackColor" format="color|reference" />
+        <attr name="kswFadeBack" format="boolean" />
+        <attr name="kswThumbRangeRatio" format="float" />
+        <attr name="kswAnimationDuration" format="integer" />
+        <attr name="kswTintColor" format="color|reference" />
+        <attr name="kswTextOn" format="string" />
+        <attr name="kswTextOff" format="string" />
+        <attr name="kswTextThumbInset" format="dimension" />
+        <attr name="kswTextExtra" format="dimension" />
+        <attr name="kswTextAdjust" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="BGAProgressBar">
+        <!-- 进度条样式，默认值为 system -->
+        <attr name="bga_pb_mode" format="enum">
+            <!-- 系统自带样式 -->
+            <enum name="system" value="0" />
+            <!-- 水平进度条 -->
+            <enum name="horizontal" value="1" />
+            <!-- 圆形进度条 -->
+            <enum name="circle" value="2" />
+            <!-- 彗星进度条 -->
+            <enum name="comet" value="3" />
+            <!-- 水波纹进度条 -->
+            <enum name="wave" value="4" />
+        </attr>
+        <!-- 文字颜色，默认值为 #70A800 -->
+        <attr name="bga_pb_textColor" format="reference|color" />
+        <!-- 文字大小，默认值为 10sp -->
+        <attr name="bga_pb_textSize" format="dimension" />
+        <!-- 文字和进度条之间的间距，默认值为 4dp -->
+        <attr name="bga_pb_textMargin" format="dimension" />
+        <!-- 已完成进度的颜色，默认值为 #70A800 -->
+        <attr name="bga_pb_reachedColor" format="reference|color" />
+        <!-- 已完成进度的高度，默认值为 2dp -->
+        <attr name="bga_pb_reachedHeight" format="dimension" />
+        <!-- 未完成进度的颜色，默认值为 #CCCCCC -->
+        <attr name="bga_pb_unReachedColor" format="reference|color" />
+        <!-- 未完成进度的高度，默认值为 1dp -->
+        <attr name="bga_pb_unReachedHeight" format="dimension" />
+        <!-- 是否为圆角，默认值为 false -->
+        <attr name="bga_pb_isCapRounded" format="boolean" />
+        <!-- 是否隐藏文字，默认值为 false -->
+        <attr name="bga_pb_isHiddenText" format="boolean" />
+        <!-- 圆形进度条半径，默认值为 16dp -->
+        <attr name="bga_pb_radius" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ViewfinderView">
+        //边角颜色
+        <attr name="corner_color" format="color" />
+        <attr name="laser_color" format="color" />
+        //扫描框边线颜色
+        <attr name="frame_color" format="color" />
+        //模糊区域颜色
+        <attr name="mask_color" format="color" />
+        <attr name="result_point_color" format="color" />
+        //扫描点颜色
+        <attr name="result_color" format="color" />
+        <attr name="label_text_color" format="color" />
+        //框上方提示
+        <attr name="label_text" format="string" />
+        <attr name="label_text_size" format="float" />
+    </declare-styleable>
+
+
+    <!--下拉选择框-->
+    <declare-styleable name="MySpinnerView">
+
+        <attr name="Spinner_text" format="string" />
+        <attr name="Spinner_showFull" format="boolean" />
+        <attr name="Spinner_textSize" format="dimension" />
+        <attr name="Spinner_textColor" format="color" />
+        <attr name="Spinner_checkTextColor" format="color" />
+        <attr name="Spinner_checkIcon" format="reference|color" />
+        <attr name="Spinner_Icon" format="reference|color" />
+        <attr name="Spinner_IconPadding" format="dimension" />
+        <attr name="Spinner_IconWidth" format="dimension" />
+        <attr name="Spinner_IconHeight" format="dimension" />
+        <attr name="android:layout_gravity"></attr>
+        <!--是否对第一项处理-->
+        <attr name="Spinner_First" format="boolean" />
+        <attr name="Spinner_gravity_mode" format="enum">
+            <!--居左 -->
+            <enum name="left" value="0" />
+            <!-- 居右 -->
+            <enum name="right" value="1" />
+            <!-- 居中 -->
+            <enum name="center" value="2" />
+
+        </attr>
+    </declare-styleable>
+
+    <!--顶部控件-->
+    <declare-styleable name="TopSearchView">
+        <attr name="topSearchTitleColor" format="color"></attr>
+        <attr name="topSearchTitleSize" format="dimension"></attr>
+        <attr name="topSearchTitle" format="string"></attr>
+        <attr name="topSearchLeftImg" format="reference"></attr>
+        <attr name="topSearchRihtImg" format="reference"></attr>
+        <attr name="topSearchLeftSize" format="dimension"></attr>
+        <attr name="topSearchRihtSize" format="dimension"></attr>
+        <attr name="topSearchLeftText" format="string"></attr>
+        <attr name="topSearchLeftShow" format="boolean"></attr>
+        <attr name="topSearchLeftTextSize" format="dimension"></attr>
+        <attr name="topSearchLeftTextColor" format="color"></attr>
+        <attr name="topSearchRightText" format="string"></attr>
+        <attr name="topSearchRightTextSize" format="dimension"></attr>
+        <attr name="topSearchRightTextColor" format="color"></attr>
+        <attr name="topSearchIMGSize" format="dimension"></attr>
+        <attr name="topSearchHins" format="string"></attr>
+        <attr name="topSearchHinsGraiv" format="integer" />
+        <attr name="topSearchHinsColor" format="color"></attr>
+        <attr name="topSearchIMG" format="reference"></attr>
+        <attr name="topSearchBackground" format="reference"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="GangedView">
+        <attr name="gan_TitleColor" format="color"></attr>
+        <attr name="gan_TitleSelectColor" format="color"></attr>
+        <attr name="gan_TextSize" format="dimension"></attr>
+        <attr name="gan_TextColor" format="color"></attr>
+        <attr name="gan_TextSelectColor" format="color"></attr>
+        <attr name="gan_IndicatorHeight" format="color"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="ItemView">
+        <attr name="item_leftWight" format="integer"></attr>
+        <attr name="item_leftText" format="string"></attr>
+        <attr name="item_Text" format="string"></attr>
+        <attr name="item_leftHint" format="string"></attr>
+        <attr name="item_leftTextMaxLine" format="integer"></attr>
+        <attr name="item_leftTextSize" format="dimension"></attr>
+        <attr name="item_leftTextMinWidth" format="dimension"></attr>
+        <attr name="item_leftTextColor" format="color"></attr>
+        <attr name="item_leftTextBold" format="boolean"></attr>
+        <attr name="item_leftIcon" format="reference|color"></attr>
+        <attr name="item_leftIconWidth" format="dimension"></attr>
+        <attr name="item_leftIconHeight" format="dimension"></attr>
+        <attr name="item_leftIconPadding" format="dimension"></attr>
+        <attr name="item_leftTextGravity">
+            <flag name="start" value="1" />
+            <flag name="end" value="2" />
+            <flag name="center" value="3" />
+        </attr>
+        <attr name="gravity">
+            <flag name="top" value="1" />
+            <flag name="bottom" value="2" />
+            <flag name="center_vertical" value="3" />
+            <flag name="center" value="4" />
+        </attr>
+        <attr name="item_rightWight" format="integer"></attr>
+        <attr name="item_rightText" format="string"></attr>
+        <attr name="item_rightHint" format="string"></attr>
+        <attr name="item_rightTextPadding" format="dimension"></attr>
+        <attr name="item_rightTextMaxLine" format="integer"></attr>
+        <attr name="item_rightTextSize" format="dimension"></attr>
+        <attr name="item_rightTextColor" format="color"></attr>
+        <attr name="item_rightTextBold" format="boolean"></attr>
+        <attr name="item_rightIcon" format="reference|color"></attr>
+        <attr name="item_rightIconWidth" format="dimension"></attr>
+        <attr name="item_rightIconHeight" format="dimension"></attr>
+        <attr name="item_rightIconPadding" format="dimension"></attr>
+        <attr name="item_rightTextGravity">
+            <flag name="start" value="1" />
+            <flag name="end" value="2" />
+            <flag name="center" value="3" />
+        </attr>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="ShadeViewGroup">
+        <attr name="containerShadowColor" format="color" />
+        <attr name="containerShadowRadius" format="dimension" />
+        <attr name="containerDeltaLength" format="dimension" />
+        <attr name="containerCornerRadius" format="dimension" />
+        <attr name="deltaX" format="dimension" />
+        <attr name="deltaY" format="dimension" />
+        <attr name="enable" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ClearEditText">
+        <!--清除按钮左右间隔-->
+        <attr name="ced_interval" format="dimension" />
+        <!--清除按钮的宽高-->
+        <attr name="ced_Size_clear" format="dimension" />
+        <attr name="ced_clear_Icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="flow_view_background" format="reference" />
+        <attr name="flow_view_select_background" format="reference" />
+        <attr name="flow_TextColor" format="color" />
+        <attr name="flow_TextSelectColor" format="color" />
+        <attr name="flow_maxIndex" format="integer" />
+        <!-- 只有maxIndex=1 有效-->
+        <attr name="flow_isCancel" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="EditView">
+        <!-- 0 不必填 1 必填-->
+        <attr name="edit_Must" format="integer" />
+        <attr name="edit_Title" format="string" />
+        <attr name="edit_TitleSize" format="dimension" />
+        <attr name="edit_TitleColor" format="color" />
+        <attr name="edit_Hint" format="string" />
+        <attr name="edit_Text" format="string" />
+        <attr name="edit_TextMarginTop" format="dimension" />
+        <attr name="edit_TextSize" format="dimension" />
+        <attr name="edit_TextColor" format="color" />
+        <attr name="edit_Edit" format="boolean" />
+        <attr name="edit_Color" format="color" />
+        <attr name="edit_Radius" format="dimension" />
+        <attr name="edit_Padding" format="dimension" />
+        <attr name="edit_ShowNumber" format="boolean" />
+        <attr name="edit_NumberColor" format="color" />
+        <attr name="edit_NumberSize" format="dimension" />
+        <attr name="edit_SingleLine" format="boolean" />
+        <attr name="android:inputType" />
+        <attr name="android:maxLength" />
+    </declare-styleable>
+    <declare-styleable name="MenuView">
+        <attr name="menu_Must" format="integer" />
+        <attr name="menu_Title" format="string" />
+        <attr name="menu_TitleColor" format="color" />
+        <attr name="menu_TitleSize" format="dimension" />
+        <attr name="menu_Hint" format="string" />
+        <attr name="menu_content" format="string" />
+        <attr name="menu_contentColor" format="color" />
+        <attr name="menu_contentSize" format="dimension" />
+        <attr name="menu_contentMaxLine" format="integer" />
+        <attr name="menu_Icon" format="reference" />
+        <attr name="menu_Pic" format="reference" />
+        <attr name="menu_showPic" format="boolean" />
+        <attr name="menu_showIcon" format="boolean" />
+    </declare-styleable>
+
+</resources>
